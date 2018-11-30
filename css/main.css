@@ -1,19 +1,28 @@
 
 @media (min-width: 768px) {
 
+
     body {
         margin: 0;
     }
 
-    #site-navbar {
-        height: 5vh;
-        background-color: transparent;
+    #div-all {
+        display: grid;
+        grid-template-columns: [v-inicio] 80px [v-inicio-logo] 200px [v-fim-logo] auto [v-inicio-agenda] 20% [v-final-agenda] 10% [v-final];
+        grid-template-rows: [h-topo] 20px [h-inicio-topo] 5vh [h-fim-topo] 30vh [h-fim-logo] 1vh [h-inicio-agenda] 500px [h-final-agenda] 150px [h-final];
     }
 
     #div-topo {
-        padding-top: 20px;
         height: 5vh;
         background-color: transparent;
+        /*grid-row: h-topo h-fim-topo;*/
+        grid-row-start: h-inicio-topo;
+        grid-row-end: h-fim-topo;
+        grid-column-start: v-inicio;
+        grid-column-end: v-final;
+        display: flex;
+        flex-direction :row;
+        justify-content: space-around;
     }
 
     .componente-topo {
@@ -39,40 +48,28 @@
         z-index: -1;
     }
 
-    #header-section {
-        /*background-image: url('../img/rock2-dt.jpg');*/
-        /*background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;*/
-        height: 95vh;
-        opacity: 0.75;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /*filter: grayscale(100%);*/
-    }
-
     #div-logo {
         opacity: 1;
         background-image: url('../img/transparent-full.png');
-        background-position: 80px center;
+        background-position: center center;
         background-repeat: no-repeat;
-        height: 200px;
-        filter: (100%);
+        grid-row-start: h-fim-topo;
+        grid-row-end: h-fim-logo;
+        grid-column-start: v-inicio-logo;
+        grid-column-end: v-fim-logo;
     }
 
     #box-agenda {
         color: white;
         border: 1px solid white;
-        width: 20%;
-        margin-bottom: 100px;
-        height: 500px;
         overflow-y: auto;
         padding-top: 10px;
         padding-bottom: 10px;
-        float: right;
-        margin-right: 10%;
         background-color: rgba(30,30,30,0.7);
+        grid-row-start: h-inicio-agenda;
+        grid-row-end: h-final-agenda;
+        grid-column-start: v-inicio-agenda;
+        grid-column-end: v-final-agenda;
     }
 
     .agenda-linha {
@@ -100,4 +97,45 @@
         padding-left: 15px;
     }
 
+    #div-apoio {
+        grid-row-start: h-inicio-agenda;
+        grid-row-end: h-final-agenda;
+        /*grid-column-start: v-inicio-logo;
+        grid-column-end: v-fim-logo;*/
+        grid-column: v-inicio-logo / v-fim-logo;
+        /*background-color: darkslategray;*/
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+        font-weight: bolder;
+    }
+
+    #div-apoio #label-header-apoio {
+        font-size: 1.1rem;
+        text-decoration: underline;
+
+    }
+
+    .anuncio {
+        align-content: center;
+    }
+
+    .anuncio img {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+
 }
+
+
