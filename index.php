@@ -31,21 +31,21 @@
     </div>
     <div id="div-logo"></div>
     <div id="box-agenda" class="">
-        <? for($i=0;$i<4;$i++) { ?>
+        <?php for($i=0;$i<4;$i++) { ?>
             <div class="agenda-linha">
                 <div class="agenda-dia">01<br/>JAN</div>
                 <div class="agenda-info ">Bar do Pingo<br/><small>informação complementar</small></div>
             </div>
-        <? } ?>
+        <?php } ?>
     </div>
     <div id="div-apoio">
         <label id="label-header-apoio">APOIO</label>
-        <? for ($i=0;$i<4;$i++) {?>
+        <?php for ($i=0;$i<2;$i++) {?>
             <div class="anuncio">
                 <img src="./img/coca.png" alt="coca-cola">
                 <label>Coca-Cola</label>
             </div>
-        <? } ?>
+        <?php } ?>
     </div>
 </div>
 </body>

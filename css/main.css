@@ -9,7 +9,7 @@
     #div-all {
         display: grid;
         grid-template-columns: [v-inicio] 80px [v-inicio-logo] 200px [v-fim-logo] auto [v-inicio-agenda] 20% [v-final-agenda] 10% [v-final];
-        grid-template-rows: [h-topo] 20px [h-inicio-topo] 5vh [h-fim-topo] 30vh [h-fim-logo] 1vh [h-inicio-agenda] 500px [h-final-agenda] 150px [h-final];
+        grid-template-rows: [h-topo] 20px [h-inicio-topo] 5vh [h-fim-topo] 30vh [h-fim-logo] 1vh [h-inicio-agenda] 50vh [h-final-agenda] auto [h-final];
     }
 
     #div-topo {
@@ -44,8 +44,9 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        opacity: .75;
+        opacity: .8;
         z-index: -1;
+        filter: grayscale(100%);
     }
 
     #div-logo {
